@@ -25,7 +25,7 @@ for i in range(quantity):
 T0 = np.sum(x_value* saturation_T) #calculates first Temperature
 Selective_component = int(input('selective component is : ')) #selective components that you want to calculate nexts stages by this component
 print(f'selective component (between 1,{quantity} ) is number {Selective_component}')
-alphas = []
+alphas = [] #activity coefficients
 for i in range(quantity):
     alpha = np.exp((A[i]-(B[i]/(T0+C[i])))-(A[Selective_component-1]-(B[Selective_component-1]/(T0+C[Selective_component-1]))))
     alphas.append(alpha.round(3)) #add alpha values to line 28 lists
